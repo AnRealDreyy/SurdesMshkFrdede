@@ -1,0 +1,14 @@
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.PlayerGui.Attacks.Frame.Attack2.Info
+}
+
+local Z = 0
+
+while task.wait() do
+if Z <= 150 then
+game:GetService("ReplicatedStorage").UseMove:FireServer(unpack(args))
+Z += 1
+else
+return
+end
+end
